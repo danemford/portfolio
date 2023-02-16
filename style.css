@@ -58,22 +58,46 @@ body {
       float: none;
       display: block;
       text-align: left;
-    }
+    }}
 .herobox {
     box-sizing: border-box;
     position: absolute;
     width: 1158px;
     height: 507px;
-    left: 151px;
-    top: 696px;
+    left: 15%;
+    top: 25%;
     background: linear-gradient(146.64deg, rgba(255, 255, 255, 0.5) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
     backdrop-filter: blur(10px);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 0px 200px;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    /*transform: matrix(1, 0, 0, -1, 0, 0);*/
     }
 
+
+
+.grid-container {
+   /* display: grid;*/
+}
+
+.hero-image {
+    box-sizing: border-box;
+    /*display:flex;
+    flex-direction: row;*/
+    position: absolute;
+    width: 401px;
+    height: 401px;
+    left: 50px;
+    top: 50px;
+    background: url(AxA), #0312fc;
+    border: 25px solid #FFFFFF;
+    border-radius: 334px;
+    /*transform: matrix(1, -0.06, 0.06, 1, 0, 0);*/
+}
+
 #dane {
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 225px;
+    position:absolute;
+    top: 60px;
+    left: 60px;
 }
