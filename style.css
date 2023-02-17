@@ -101,3 +101,10 @@ body {
     top: 60px;
     left: 60px;
 }
+
+.intro {
+    position:absolute;
+    left: 550px;
+    top: 150px;
+    text-align: left;
+}
