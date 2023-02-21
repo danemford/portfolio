@@ -3,27 +3,35 @@ body {
 }
 
 .hero {
-    background: url("bg.svg") no-repeat;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(200px, auto);
+    grid-template-areas: 
+        "n n n n n"
+        ". h h h ."
+        ". . l l l";
+    background: url("bg.svg") no-repeat center center fixed;
+    /*background-size: cover;*/
+    /*width: 100%;
+    height: 1500px; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 }
 
 .topnav {
-    overflow: hidden;
+    /*grid-column: 1/-1;
+    grid-row: -3/-1;*/
+    grid-area: n;
+    align-content: end;
+    text-align: right;
   }
   
   .topnav a {
-    float: right;
-    display: block;
+    /*float: right;*/
+    /*display: block;*/
     color: #4c4747;
-    text-align: center;
+    /*text-align: center;*/
     padding: 20px 22px;
     text-decoration: none;
     font-size: 17px;
@@ -35,11 +43,7 @@ body {
   }
 
   
-  .topnav .icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 600px) {
+ /* @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -58,19 +62,23 @@ body {
       float: none;
       display: block;
       text-align: left;
-    }}
+    }}*/
+
 .herobox {
     box-sizing: border-box;
-    position: absolute;
+    /*position: absolute;*/
     width: 1158px;
     height: 507px;
-    left: 15%;
-    top: 20%;
+    /*left: 15%;
+    top: 20%;*/
     background: linear-gradient(146.64deg, rgba(255, 255, 255, 0.5) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
     backdrop-filter: blur(10px);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 0px 200px;
     /*transform: matrix(1, 0, 0, -1, 0, 0);*/
+    /*grid-column: 2/-2;
+    grid-row: 3/5;*/
+    grid-area: h;
     }
 
 .hero-image {
@@ -117,9 +125,7 @@ body {
 }
 
 .container {
-    position: absolute;
-    left: 550px;
-    top: 720px;
+    grid-area: l;
 }
 
 .box {
@@ -199,30 +205,31 @@ body {
 }
 
 .projects {
-    position: absolute;
+    /*position: absolute;*/
     width: 1440px;
     height: 1245px;
-    left: 0px;
-    top: 946px;
+    /*left: 0px;
+    top: 946px;*/
+    display: grid;
     background: #FFFFFF;
 }
 
 #dots {
-    position: absolute;
+    /*position: absolute;*/
     width: 413px;
     height: 505px;
-    left: 127px;
-    top: 150px;
+    /* left: 127px;
+    top: 150px;*/
     opacity: 0.3;
 }
 
 #plus {
-    position: absolute;
+    /*position: absolute;*/
     width: 382.91px;
     height: 346.48px;
-    left: 1013px;
+    /*left: 1013px;
     top: 700px;
-    display: flex;
+    display: flex;*/
     align-items: center;
     text-align: center;
 
@@ -237,25 +244,25 @@ body {
 }
 
 #projectsHeading {
-    position: absolute;
-    left: 680px;
+    /*position: absolute;
+    left: 680px;*/
     padding-top: 50px;
 }
 
 #projectsUnderline {
-    position: absolute;
+    /*position: absolute;*/
     width: 19px;
     height: 19px;
-    left: 714px;
-    top: 110px;
+    /*left: 714px;
+    top: 110px;*/
     background: linear-gradient(180deg, #45BEE8 0%, #2157F2 100%);
     border-radius: 50%;
 }
 
 .container-2 {
-    position: absolute;
+    /* position: absolute;
     left: 550px;
-    top: 150px;
+    top: 150px;*/
 }
 
 .pi {
