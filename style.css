@@ -11,27 +11,20 @@ body {
         ". h h h ."
         ". . l l l";
     background: url("bg.svg") no-repeat center center fixed;
-    /*background-size: cover;*/
-    /*width: 100%;
-    height: 1500px; */
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
 
 .topnav {
-    /*grid-column: 1/-1;
-    grid-row: -3/-1;*/
     grid-area: n;
     align-content: end;
     text-align: right;
   }
   
   .topnav a {
-    /*float: right;*/
-    /*display: block;*/
     color: #4c4747;
-    /*text-align: center;*/
     padding: 20px 22px;
     text-decoration: none;
     font-size: 17px;
@@ -42,49 +35,18 @@ body {
     color: white;
   }
 
-  
- /* @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }}*/
-
 .herobox {
+    grid-area: h;
     box-sizing: border-box;
-    /*position: absolute;*/
     width: 1158px;
     height: 507px;
-    /*left: 15%;
-    top: 20%;*/
     background: linear-gradient(146.64deg, rgba(255, 255, 255, 0.5) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
     backdrop-filter: blur(10px);
-    /* Note: backdrop-filter has minimal browser support */
     border-radius: 0px 200px;
-    /*transform: matrix(1, 0, 0, -1, 0, 0);*/
-    /*grid-column: 2/-2;
-    grid-row: 3/5;*/
-    grid-area: h;
     }
 
 .hero-image {
     box-sizing: border-box;
-    /*display:flex;
-    flex-direction: row;*/
     position: absolute;
     width: 401px;
     height: 401px;
@@ -93,7 +55,6 @@ body {
     background: url(AxA), #0312fc;
     border: 25px solid #FFFFFF;
     border-radius: 334px;
-    /*transform: matrix(1, -0.06, 0.06, 1, 0, 0);*/
 }
 
 #dane {
@@ -205,68 +166,91 @@ body {
 }
 
 .projects {
-    /*position: absolute;*/
-    width: 1440px;
-    height: 1245px;
-    /*left: 0px;
-    top: 946px;*/
+    background-image: url("Dots.svg"), url("+.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
     display: grid;
-    background: #FFFFFF;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(200px, auto);
+    grid-template-areas: 
+        " h h h h h "
+        " . a a a . ";
+    margin-top: 20px;
 }
 
-#dots {
-    /*position: absolute;*/
-    width: 413px;
-    height: 505px;
-    /* left: 127px;
-    top: 150px;*/
-    opacity: 0.3;
-}
-
-#plus {
-    /*position: absolute;*/
-    width: 382.91px;
-    height: 346.48px;
-    /*left: 1013px;
-    top: 700px;
-    display: flex;*/
+.projectsHeading {
+    grid-area: h;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-
-    color: rgba(69, 190, 232, 0.1);
-
-    transform: rotateX('45');
-}
-
-#p {
-    position: relative;
-    display: inline-block;
+    justify-content: center;
 }
 
 #projectsHeading {
-    /*position: absolute;
-    left: 680px;*/
+    display: flex;
+    justify-self: center;
+    align-self: center;
     padding-top: 50px;
-}
+} 
 
 #projectsUnderline {
-    /*position: absolute;*/
     width: 19px;
     height: 19px;
-    /*left: 714px;
-    top: 110px;*/
     background: linear-gradient(180deg, #45BEE8 0%, #2157F2 100%);
     border-radius: 50%;
-}
-
-.container-2 {
-    /* position: absolute;
-    left: 550px;
-    top: 150px;*/
 }
 
 .pi {
     width: 300px;
     height: 200px;
     padding: 25px;
+}
+
+.container-2 {
+    grid-area: a;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(200px, auto);
+    grid-template-areas: 
+    "t t t t"
+    "i i d d"
+    "i i g l";
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    grid-area: t;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.pi {
+    grid-area: i;
+}
+
+p {
+    grid-area: d;
+    text-align: center;
+}
+
+.github {
+    grid-area: g;
+    text-align: center;
+}
+
+.live {
+    grid-area: l;
+    text-align: center;
 }
