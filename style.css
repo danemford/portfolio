@@ -249,6 +249,7 @@ h3 {
 
 .pi {
     grid-area: i;
+    border-radius: 50px;
 }
 
 .p {
@@ -270,6 +271,7 @@ h3 {
 .github:hover {
     background-color: #45BEE8;
     color: white;
+    cursor: pointer;
 }
 
 .button-image {
@@ -291,5 +293,5 @@ h3 {
 .live:hover {
     background-color: #45BEE8;
     color: white;
-    content:;
+    cursor: pointer;
 }
