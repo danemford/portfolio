@@ -37,6 +37,7 @@ body {
 
 .herobox {
     grid-area: h;
+    display: flex;
     box-sizing: border-box;
     width: 1158px;
     height: 507px;
@@ -44,6 +45,12 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 0px 200px;
     }
+
+#wrapper {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .hero-image {
     box-sizing: border-box;
@@ -221,13 +228,17 @@ body {
 .project-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(200px, auto);
+    /*grid-template-rows: minmax(200px, auto);*/
     grid-template-areas: 
     "t t t t"
     "i i d d"
     "i i g l";
     justify-content: center;
     align-items: center;
+    border: 5px solid #45BEE8;
+    border-radius: 12px;
+    border-spacing: 5px;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -240,7 +251,7 @@ h3 {
     grid-area: i;
 }
 
-p {
+.p {
     grid-area: d;
     text-align: center;
 }
@@ -248,9 +259,37 @@ p {
 .github {
     grid-area: g;
     text-align: center;
+    background-color: white;
+    color: black;
+    border: 2px solid #45BEE8;
+    margin: 20px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.github:hover {
+    background-color: #45BEE8;
+    color: white;
+}
+
+.button-image {
+    width: 40px;
+    height: 40px;
 }
 
 .live {
     grid-area: l;
     text-align: center;
+    background-color: white;
+    color: black;
+    border: 2px solid #45BEE8;
+    margin: 20px;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.live:hover {
+    background-color: #45BEE8;
+    color: white;
+    content:;
 }
