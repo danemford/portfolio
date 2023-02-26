@@ -204,7 +204,7 @@ body {
     padding-top: 50px;
 } 
 
-#projectsUnderline {
+#projectsUnderline, #contactsUnderline {
     width: 19px;
     height: 19px;
     background: linear-gradient(180deg, #45BEE8 0%, #2157F2 100%);
@@ -294,4 +294,47 @@ h3 {
     background-color: #45BEE8;
     color: white;
     cursor: pointer;
+}
+
+.about {
+    display: flex;
+    background-color: #45BEE8;
+    justify-content: space-around;
+    min-height: 600px;
+    /*align-content: center;*/
+    align-items: center;
+}
+
+.about div img {
+    width: 300px;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px #0312fc;
+    transition: 0.15s;
+    opacity: 85%;
+}
+
+.about div img:hover {
+    box-shadow: 25px 25px 0px #0312fc;
+    transition: 0.25s;
+    opacity: 100%;
+}
+
+
+#me {
+    width: 60%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactsUnderline {
+    align-self: center;
+    justify-self: center;
 }
