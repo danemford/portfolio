@@ -1,4 +1,4 @@
-@media all and (min-width: 1000px) {
+@media all and (min-width: 600px) and (max-width: 1000px) {
 
     body {
         font-family: 'Roboto', sans-serif;
@@ -7,7 +7,7 @@
     .hero {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: minmax(200px, auto);
+        grid-template-rows: auto;
         grid-template-areas: 
             "n n n n n"
             ". h h h ."
@@ -40,45 +40,54 @@
     .herobox {
         grid-area: h;
         display: flex;
+        justify-content: flex-start;
         box-sizing: border-box;
-        width: 1158px;
-        height: 507px;
+        width:min-content;
+        height: auto;
         background: linear-gradient(146.64deg, rgba(255, 255, 255, 0.5) -6.76%, rgba(0, 71, 255, 0.05) 102.96%);
         backdrop-filter: blur(10px);
-        border-radius: 0px 200px;
+        border-radius: 150px 0px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         }
 
     #wrapper {
         display:flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
+        /*flex-wrap: wrap;*/
     }
 
     .hero-image {
-        box-sizing: border-box;
+        /*box-sizing: border-box;
         position: absolute;
-        width: 401px;
-        height: 401px;
         left: 50px;
-        top: 50px;
+        top: 50px;*/
+        width: 350px;
+        height: 350px;
         background: url(AxA), #0312fc;
         border: 25px solid #FFFFFF;
         border-radius: 334px;
+        display: flex;
+        align-items:center;
+        justify-content: space-around;
     }
 
     #dane {
-        width: 225px;
-        height: 225px;
-        position:absolute;
+        width: 200px;
+        height: 200px;
+        /*position:absolute;
         top: 60px;
-        left: 60px;
+        left: 60px;*/
     }
 
     .intro {
-        position:absolute;
+        /*position:absolute;
         left: 550px;
         top: 150px;
-        text-align: left;
+        text-align: left;*/
+        text-align: center;
+        padding-bottom: 30px;
     }
 
     #blueDane {
@@ -96,6 +105,11 @@
 
     .container {
         grid-area: l;
+        display: grid;
+        grid-template-areas: 
+        "r j"
+        "h c";
+        justify-self: center;
     }
 
     .box {
@@ -104,6 +118,22 @@
         height: 124;
         display: inline-block;
         padding: 15px;
+    }
+
+    #h {
+        grid-area: h;
+    }
+    
+    #c {
+        grid-area: c;
+    }
+    
+    #j {
+        grid-area: j;
+    }
+    
+    #r {
+        grid-area: r;
     }
 
     .rectangle {
