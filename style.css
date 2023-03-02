@@ -197,6 +197,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        font-size: 2rem;
     }
 
     #projectsHeading {
@@ -378,4 +379,8 @@
         padding-bottom: 25px;
     }
 
+}
+
+.projectsHeading {
+    font-size: 1.5rem;
 }
